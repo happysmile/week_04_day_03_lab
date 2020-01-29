@@ -46,4 +46,28 @@ class Student
     return House.find_by_id(@house_id.to_i)
   end
 
+  def delete()
+    sql = "DELETE FROM students
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run( sql, values )
+  end
+
+  def update()
+    sql = "UPDATE students
+    SET
+    (
+      first_name,
+      last_name,
+      age,
+      house_id
+    ) =
+    (
+      $1, $2, $3, $4
+    )
+    WHERE id = $5"
+    values = [@first_name, @last_name, @age, @house_id, @id]
+    SqlRunner.run( sql, values )
+  end
+
 end

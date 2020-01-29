@@ -36,4 +36,11 @@ class House
     SqlRunner.run(sql)
   end
 
+  def students()
+    sql = "SELECT * FROM students WHERE house_id = $1"
+    values = [id]
+    students = SqlRunner.run(sql, values)
+    return students.map {|student| Student.new(student)}
+  end
+
 end

@@ -1,0 +1,32 @@
+<h2><%= @student.full_name() %></h2>
+
+<table>
+  <thead>
+    <th>Student name</th>
+    <th>Age</th>
+    <th>House</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @student.full_name() %></td>
+      <td><%= @student.age %></td>
+      <td>
+        <a href="/houses/<%=@student.house().id%>"">
+          <%= @student.house().name %>
+        </a>
+      </td>
+      <td>
+        <form action="/students/delete/<%= @student.id %>" method="post">
+          <input type="submit" name="delete" value="Delete">
+        </form>
+      </td>
+      <td>
+        <form action="/students/edit/<%= @student.id %>" method="get">
+          <input type="submit" name="update" value="Update">
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>

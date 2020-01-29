@@ -1,0 +1,136 @@
+/* GLOBAL STYLE */
+
+@font-face {
+  font-family: 'harrypotter';
+  src: url('fonts/harrypotter.eot');
+  src: url('fonts/harrypotter.eot?#iefix') format('embedded-opentype'),
+       url('fonts/harrypotter.woff2') format('woff2'),
+       url('fonts/harrypotter.woff') format('woff'),
+       url('fonts/harrypotter.ttf')  format('truetype'),
+       url('fonts/harrypotter.svg') format('svg');
+}
+
+body {
+	background-color: black;
+  margin: 0;
+	padding: 0;
+	font: 67.5% Verdana, Arial, serif;
+	color: white;
+  text-align: center;
+}
+
+#home {
+  background-image: url('images/hogwarts.jpg');
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+hr {
+  border: 1px black solid;
+}
+
+h1, h2, h3, h4 {
+  font: 300% harrypotter;
+}
+
+p, li, label, input {
+	font-size: 1.2em;
+	line-height: 1;
+}
+
+th, td {
+  font-size: 1.5em;
+  line-height: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+a, th {
+  color: aquamarine;
+}
+
+img {
+	border-style: none;
+}
+
+ul {
+ margin: 0;
+ padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+
+/* NAVIGATION */
+nav {
+  border-bottom: 1px lightgreen solid;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-left: 1em;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+/* FORMS */
+
+form {
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+  margin: auto;
+  padding: 1em 0;
+}
+
+input, select {
+  border: 1px aquamarine solid;
+  background-color: black;
+  color: white;
+}
+
+label {
+  color: aquamarine;
+  text-align: right;
+}
+
+
+
+
+/* Houses */
+#houses {
+  display: flex;
+  justify-content: center;
+}
+
+#houses li {
+  margin: 0.5em;
+}
+
+#houses a {
+  display: block;
+  text-decoration: none;
+}

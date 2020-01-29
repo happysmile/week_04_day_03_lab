@@ -1,0 +1,22 @@
+<h2>Student's details successfully updated!</h2>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+    <th>House</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @student.first_name %></td>
+      <td><%= @student.last_name %></td>
+      <td><%= @student.age %></td>
+      <td>
+        <a href="/houses/<%=@student.house().id%>"">
+          <%= @student.house().name %>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
