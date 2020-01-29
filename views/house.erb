@@ -1,10 +1,12 @@
-<h2>Student's List</h2>
+<h2><%= @house.name %></h2>
+
+<img src="<%= @house.url %>" alt="<%= @house.name %>">
+
 
 <table>
   <thead>
     <th>Student name</th>
     <th>Age</th>
-    <th>House</th>
     <th></th>
     <th></th>
   </thead>
@@ -17,11 +19,6 @@
         </a>
       </td>
       <td><%= student.age %></td>
-      <td>
-        <a href="/houses/<%=student.house().id%>">
-          <%= student.house().name %>
-        </a>
-      </td>
       <td>
         <form action="/students/delete/<%= student.id %>" method="post">
           <input type="submit" name="delete" value="Delete">

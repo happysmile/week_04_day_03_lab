@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HOGWARTS</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
-  <body>
+  <body<%if @page_id%> id="<%=@page_id %>"<% end %>>
 
     <nav>
+      <h1>Hogwarts</h1>
       <ul>
+        <li><a href="/">Home</a></li>
         <li><a href="/houses">Houses</a></li>
         <li><a href="/students">Students' list</a></li>
         <li><a href="/students/new">Add student</a></li>
       </ul>
     </nav>
 
-    <h1>Hogwarts</h1>
+
     <%= yield %>
 
 

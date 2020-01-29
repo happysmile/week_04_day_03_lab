@@ -1,7 +1,12 @@
 <h2>Houses</h2>
 
-<ul>
+<ul id="houses">
 <% for house in @houses %>
-  <li><%= house.name %></li>
+  <li>
+    <a href="/houses/<%= house.id %>">
+      <%= house.name %><br>
+      <img src="<%= house.url %>" alt="<%= house.name %>">
+    </a>
+  </li>
 <% end %>
 </ul>

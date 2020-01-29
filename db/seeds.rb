@@ -8,28 +8,28 @@ House.delete_all()
 # create houses
 gryffindor = House.new({
   'name' => 'Gryffindor',
-  'url' => ''
+  'url' => '/images/gryffindor.png'
 })
 
 gryffindor.save()
 
 slytherin = House.new({
   'name' => 'Slytherin',
-  'url' => ''
+  'url' => '/images/slytherin.png'
 })
 
 slytherin.save()
 
 ravenclaw = House.new({
   'name' => 'Ravenclaw',
-  'url' => ''
+  'url' => '/images/ravenclaw.png'
 })
 
 ravenclaw.save()
 
 hufflepuff = House.new({
   'name' => 'Hufflepuff',
-  'url' => ''
+  'url' => '/images/hufflepuff.png'
 })
 
 hufflepuff.save()
